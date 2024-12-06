@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color:rgb(2, 2, 48);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.ipl-logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f1c40f;
+    border-radius: 5px;
+}
+
+
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-right: 800px;
+    width: 100%;
+}
+
+/* Container for the table */
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    width: 90%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Table header styling */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Table body styling */
+td {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping for table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Highlight row for the top team */
+tr:nth-child(1) {
+    background-color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* Styling for positions */
+td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+.copy{
+    align-items: center;
+    font-size: large;
+    text-align: center;
+    margin-top:100px ;
+    color: #111;
+    height: 22px;
+    width: 100%;
+    background-color: gray;
+}
+
+#kkr{
+ color: rgb(6, 2, 6);
+ background-color: purple;
+}
+#srh{
+    background-color: orangered
+
+}
+#rr{
+    background-color: pink
+}
+#rcb{
+    background-color: red
+}
+#csk{
+    background-color: yellow;
+}
+#dc{
+    background-color: darkblue;
+}
+#lsg{
+    background-color: lightblue;
+}
+#gt{
+    background-color:darkslateblue
+}
+#pk{
+    background-color: darkred
+}
+#mi{
+    background-color:blue
+}
+.seasons{
+    margin-top: 25px;
+    justify-content: center;
+    text-align: center;
+
+}

@@ -1,0 +1,38 @@
+.team-box{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #071026;
+
+}
+.box{
+    border: 2px solid black;
+    height: 300px;
+    width: 23%;
+    align-items: center;
+    padding: 20px 0px 15px;
+    padding-left: 65px;
+    margin-top: 50px;
+    background-color: aliceblue;
+
+
+}
+.box-image{
+    height: 200px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+
+}
+.box-content{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.years{
+    margin-top: 25px;
+    align-items: center;
+    text-align: center;
+}
