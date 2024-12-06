@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPL 2024 - Official Website</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/teams.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="static/img/ipl1 logo.jpeg" alt="IPL Logo" class="ipl-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/matches">Matches</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/table">Points Table</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Select a Season</h1>
+    <form id="seasonForm" action="" method="get">
+        <label for="season">SELECT SEASON</label>
+        <select name="season" id="season" onchange="redirectToSeason()">
+            <option value="">-- Choose a season --</option>
+            <option value="2024">SEASON 2024</option>
+            <option value="2023">SEASON 2023</option>
+            <option value="2022">SEASON 2022</option>
+            <option value="2021">SEASON 2021</option>
+            <option value="2020">SEASON 2020</option>
+            <option value="2019">SEASON 2019</option>
+          <option value="2018">SEASON 2018</option>
+          <option value="2017">SEASON 2017</option>
+          <option value="2016">SEASON 2016</option>
+          <option value="2015">SEASON 2015</option>
+          <option value="2014">SEASON 2014</option>
+          <option value="2013">SEASON 2013</option>
+          <option value="2012">SEASON 2012</option>
+          <option value="2011">SEASON 2011</option>
+          <option value="2010">SEASON 2010</option>
+          <option value="2009">SEASON 2009</option>
+          <option value="2008">SEASON 2008</option>
+
+        </select>
+    </form>
+
+
+
+    <div class="team-box">
+        <div class="box1 box"><div class="box-content" ><h2>Chennai Super Kings</h2>
+        <div class="box-image" class="csk" style="background-image: url('https://documents.iplt20.com/ipl/CSK/logos/Logooutline/CSKoutline.png');">
+        </div></div></div>
+        <div class="box1 box"><div class="box-content"><h2>Mumbai Indians</h2>
+            <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/MI/Logos/Logooutline/MIoutline.png');">
+            </div></div></div>
+        <div class="box1 box"><div class="box-content"><h2>Kolkota Knight Riders</h2>
+            <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/KKR/Logos/Logooutline/KKRoutline.png');">
+            </div></div></div>
+        <div class="box1 box"><div class="box-content"><h2>Royal Challangers Bangaluru</h2>
+            <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/RCB/Logos/Logooutline/RCBoutline.png');">
+            </div></div></div>
+            <div class="box1 box"><div class="box-content"><h2>Sunrisers Hyderabad</h2>
+                <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/SRH/Logos/Logooutline/SRHoutline.png');">
+                </div></div></div>
+                <div class="box1 box"><div class="box-content"><h2>Rajastan Royals</h2>
+                    <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/RR/Logos/Logooutline/RRoutline.png');">
+                    </div></div></div>
+                <div class="box1 box"><div class="box-content"><h2>Delhi Capitals</h2>
+                    <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/DC/Logos/LogoOutline/DCoutline.png');">
+                    </div></div></div>
+                <div class="box1 box"><div class="box-content"><h2>Punjab Kings</h2>
+                    <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/PBKS/Logos/Logooutline/PBKSoutline.png');">
+                    </div></div></div>
+                    <div class="box1 box"><div class="box-content"><h2>Gujarat Titans</h2>
+                        <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/GT/Logos/Logooutline/GToutline.png');">
+                        </div></div></div>
+                        <div class="box1 box"><div class="box-content"><h2>Lucknow Super Giants</h2>
+                            <div class="box-image" style="background-image: url('https://documents.iplt20.com/ipl/LSG/Logos/Logooutline/LSGoutline.png');">
+                            </div></div></div>
+
+
+    </div>
+ <script>
+        function redirectToSeason() {
+            const season = document.getElementById("season").value;
+            if (season) {
+                window.location.href = /${season};
+            }
+        }
+    </script>
+
+</body>
+<footer>
+    <p class="copy">&copy; 2024 IPL. All Rights Reserved.</p>
+</footer>
+
+</html>

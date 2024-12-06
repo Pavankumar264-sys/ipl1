@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Points Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .points-table {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .points-table div {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+
+        .points-table .header {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .team-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .team-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .team-name img {
+            border-radius: 50%;
+        }
+
+        .team-name span {
+            flex-grow: 1;
+        }
+    </style>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+ <header>
+        <div class="logo">
+            <img src="static/img/ipl1 logo.jpeg" alt="IPL Logo" class="ipl-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/matches">Matches</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/table">Points Table</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Points Table</h1>
+        <div class="points-table" id="points-table">
+            <div class="header">Standing</div>
+            <div class="header">Team</div>
+            <div class="header">Played</div>
+            <div class="header">Won</div>
+            <div class="header">Lost</div>
+            <div class="header">Points</div>
+            <div class="header">Net Run Rate</div>
+        </div>
+    </div>
+
+    <script>
+        const teams = [
+            { name: "Mumbai Indians", logo: "static/img/mi l.png", played: 14, won: 4, lost: 10, points: 8, nrr: -0.318 },
+            { name: "Chennai Super Kings", logo: "static/img/csk1.png", played: 14, won: 7, lost: 7, points: 14, nrr: 0.392 },
+            { name: "Royal Challengers Bangalore", logo: "static/img/rcb-logo-new.png", played: 14, won: 7, lost: 7, points: 14, nrr: 0.459 },
+            { name: "Kolkata Knight Riders", logo: "static/img/kkr.png", played: 14, won: 9, lost: 3, points: 20, nrr: 1.428 },
+            { name: "Sunrisers Hyderbad", logo:"static/img/srh2.png",played:14,won:8,lost:5,points:17,nrr:0.414},
+            { name: "Delhi Capitals", logo:"static/img/dc log.jpeg",played:14,won:7,lost:7,points:14,nrr:-0.377},
+            { name: "Lucknow Super Gaints",logo:"static/img/lucknow.png",played:14,won:7,lost:7,points:14,nrr:-0.667},
+            { name: "Gujarat Titans",logo:"static/img/gt.png",played:14,won:5,lost:7,points:12,nrr:-1.667},
+            { name: "Rajastan Royals",logo:"static/img/rrr.png",played:14,won:8,lost:5,points:17,nrr:0.273},
+            {name: "Punjab Kings",logo:"static/img/pbks1.png",played:14,won:5,lost:9,points:10,nrr:-0.353},
+        ];
+
+        // Sort teams by wins, then points, then net run rate in descending order
+        teams.sort((a, b) => {
+            if (b.won !== a.won) return b.won - a.won;
+            if (b.points !== a.points) return b.points - a.points;
+            return b.nrr - a.nrr;
+        });
+
+        const table = document.getElementById('points-table');
+
+        teams.forEach((team, index) => {
+            table.innerHTML += `
+                <div>${index + 1}</div>
+                <div class="team-name">
+                    <img src="${team.logo}" alt="${team.name} Logo" class="team-logo">
+                    <span>${team.name}</span>
+                </div>
+                <div>${team.played}</div>
+                <div>${team.won}</div>
+                <div>${team.lost}</div>
+                <div>${team.points}</div>
+                <div>${team.nrr.toFixed(3)}</div>
+            `;
+        });
+    </script>
+</body>
+</html>

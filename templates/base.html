@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}IPL 2024 - Official Website{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/config/script.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="/static/img/ipl1_logo.jpeg" alt="IPL Logo" class="ipl-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/matches">Matches</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/table">Points Table</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/players">Add-Players</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 IPL. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

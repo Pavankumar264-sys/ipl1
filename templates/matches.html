@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Match Details - IPL 2024{% endblock %}
+
+{% block content %}
+<header class="header">
+    <h1>IPL Match Details</h1>
+</header>
+
+<div class="container" id="match-container">
+    <!-- Match details will be dynamically added here -->
+</div>
+
+<script>
+    // Sample Match Data
+    const matchDetails = [
+        {
+            team1: {
+                name: "Chennai Super Kings",
+                logo: "https://upload.wikimedia.org/wikipedia/en/4/4b/Chennai_Super_Kings_Logo.svg"
+            },
+            team2: {
+                name: "Mumbai Indians",
+                logo: "https://upload.wikimedia.org/wikipedia/en/2/28/Mumbai_Indians_Logo.svg"
+            },
+            date: "December 15, 2024",
+            time: "7:30 PM IST",
+            venue: "M. A. Chidambaram Stadium, Chennai"
+        },
+        {
+            team1: {
+                name: "Royal Challengers Bangalore",
+                logo: "https://upload.wikimedia.org/wikipedia/en/d/d1/Royal_Challengers_Bangalore_Logo.svg"
+            },
+            team2: {
+                name: "Kolkata Knight Riders",
+                logo: "https://upload.wikimedia.org/wikipedia/en/3/3a/Kolkata_Knight_Riders_Logo.svg"
+            },
+            date: "December 20, 2024",
+            time: "7:30 PM IST",
+            venue: "M. Chinnaswamy Stadium, Bangalore"
+        }
+    ];
+
+    // Function to Display Match Details
+    function displayMatches() {
+        const container = document.getElementById('match-container');
+
+        matchDetails.forEach(match => {
+            const matchCard = document.createElement('div');
+            matchCard.classList.add('match-card');
+
+            matchCard.innerHTML = `
+                <div class="team">
+                    <img src="${match.team1.logo}" alt="${match.team1.name}">
+                    <h2>${match.team1.name}</h2>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                    <img src="${match.team2.logo}" alt="${match.team2.name}">
+                    <h2>${match.team2.name}</h2>
+                </div>
+                <div class="details">
+                    <p><strong>Date:</strong> ${match.date}</p>
+                    <p><strong>Time:</strong> ${match.time}</p>
+                    <p><strong>Venue:</strong> ${match.venue}</p>
+                </div>
+            `;
+
+            container.appendChild(matchCard);
+        });
+    }
+
+    // Call the function to display matches
+    displayMatches();
+</script>
+{% endblock %}
